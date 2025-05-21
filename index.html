@@ -6,36 +6,30 @@
   <title>Historial de Compras</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f1f1f1;
       margin: 0;
       padding: 0;
-      background-color: #f6f6f6;
-      color: #333;
     }
 
     header {
-      background-color: #007940;
+      background-color: #007844;
       color: white;
-      padding: 1rem;
+      padding: 2rem;
       text-align: center;
     }
 
     .container {
-      max-width: 1000px;
-      margin: auto;
+      max-width: 800px;
+      margin: 2rem auto;
       padding: 2rem;
-    }
-
-    .card {
-      background: white;
+      background-color: white;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
-      color: #007940;
+      color: #007844;
     }
 
     table {
@@ -45,44 +39,23 @@
     }
 
     th, td {
-      border-bottom: 1px solid #ccc;
       padding: 0.75rem;
       text-align: left;
+      border-bottom: 1px solid #ddd;
     }
 
     th {
-      background-color: #e9f5ec;
+      background-color: #e6f4ec;
+      font-weight: bold;
     }
 
-    @media (max-width: 768px) {
+    @media screen and (max-width: 600px) {
       .container {
         padding: 1rem;
       }
-
-      table, thead, tbody, th, td, tr {
-        display: block;
+      th, td {
+        padding: 0.5rem;
       }
-
-      th {
-        position: absolute;
-        left: -9999px;
-      }
-
-      td {
-        position: relative;
-        padding-left: 50%;
-      }
-
-      td::before {
-        position: absolute;
-        left: 1rem;
-        font-weight: bold;
-        white-space: nowrap;
-      }
-
-      td:nth-child(1)::before { content: "Producto"; }
-      td:nth-child(2)::before { content: "Precio"; }
-      td:nth-child(3)::before { content: "Cantidad"; }
     }
   </style>
 </head>
@@ -90,39 +63,34 @@
   <header>
     <h1>Historial de Compras</h1>
   </header>
-
   <div class="container">
-    <div class="card">
-      <h2>Ticket del 18 de mayo de 2025</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-            <th>Cantidad</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Leche entera Hacendado</td>
-            <td>0,89 €</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>Pan integral</td>
-            <td>1,05 €</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>Pechuga de pollo</td>
-            <td>6,95 €</td>
-            <td>1</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h2>Ticket del 18 de mayo de 2025</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Leche entera Hacendado</td>
+          <td>0,89 €</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Pan integral</td>
+          <td>1,05 €</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Pechuga de pollo</td>
+          <td>6,95 €</td>
+          <td>1</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </body>
 </html>
-
-
